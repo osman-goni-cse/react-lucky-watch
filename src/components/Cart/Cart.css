@@ -1,0 +1,8 @@
+.cart {
+  width: 244px;
+  /* height: 400px; */
+  position: sticky;
+  top: 0;
+  background-color: #ffe0b3;
+  color: #1C2B35;
+}
