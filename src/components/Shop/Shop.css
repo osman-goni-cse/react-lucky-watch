@@ -1,0 +1,14 @@
+.shop {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.watches {
+  border: 2px solid seagreen;
+  /* background-color: burlywood; */
+}
+
+.selected-items {
+  border: 2px solid blueviolet;
+  /* background-color: brown; */
+}
