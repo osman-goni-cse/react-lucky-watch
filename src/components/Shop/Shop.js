@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Watch from '../Watch/Watch';
 import './Shop.css'
 
 const Shop = () => {
@@ -13,10 +14,16 @@ const Shop = () => {
 
 
   return (
-    <div className='shop'>
-      <div className="watches">
-        <h2>Watch me</h2>
-        <h4>Watches: {watches.length} </h4>
+    <div className='shop container'>
+      <div className="watches row row-cols-1 row-cols-md-3 g-4">
+        
+        {
+          watches.map(watch => <Watch
+            key={watch.id}
+            watch={watch}
+          ></Watch>)
+        }
+
       </div>
 
       <div className="selected-items">
