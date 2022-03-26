@@ -47,7 +47,7 @@ const Shop = () => {
   // console.log(cart);
 
   return (
-    <div className='shop container'>
+    <div className='shop'>
       <div className="watches row row-cols-1 row-cols-md-3 g-4">
         
         {
