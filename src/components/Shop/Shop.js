@@ -3,6 +3,7 @@ import Cart from '../Cart/Cart';
 import Watch from '../Watch/Watch';
 import './Shop.css'
 
+
 const Shop = () => {
 
   const [watches, setWatches] = useState([]);
@@ -65,6 +66,7 @@ const Shop = () => {
         cart={cart}
         chooseAgain={chooseAgain}
       ></Cart>
+      
       </div>
     </div>
   );

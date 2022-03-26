@@ -13,7 +13,10 @@ const Cart = (props) => {
   const chooseOne = () => {
     let myWatch = [];
     const idx = Math.floor(Math.random()*cart.length);
-    myWatch.push(cart[idx]);
+    
+    if(cart.length > 0) {
+      myWatch.push(cart[idx]);
+    }
 
     setluckyWatch(myWatch);
   }
@@ -22,7 +25,7 @@ const Cart = (props) => {
     <div className='cart'>
       <h3 className='text-center'>Selected Watch</h3>
       {
-        cart.map(item => <p className='text-center'>{item.name}</p>)
+        cart.map(item => <p key={item.id} className='text-center'>{item.name}</p>)
       }
       <div className="d-grid gap-2">
         <button onClick={chooseOne} className="btn btn-outline-success fw-bold" type="button" >Choose One For me</button>
