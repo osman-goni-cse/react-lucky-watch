@@ -6,7 +6,7 @@ import './Watch.css'
 const Watch = (props) => {
   // console.log(props);
   // console.log(props.watch);
-  const {id, name, img, price} = props.watch;
+  const {name, img, price} = props.watch;
   const addToCartHandler = props.addToCartHandler;
 
   // console.log(addToCartHandler);
@@ -19,7 +19,7 @@ const Watch = (props) => {
     <div className="col product">
       <div className="card h-100">
         <img src={img} alt="Not Found" className='card-img-top'></img>
-        {/* <img src={img} className="card-img-top" alt="..."> */}
+        
         <div className="card-body">
           <h5 className="card-title">{name}</h5>
           <p className="card-text">Price: {price} Tk </p>

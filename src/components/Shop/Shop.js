@@ -24,7 +24,13 @@ const Shop = () => {
 
     if(!exists) {
       // selectedItem.push(selectedWatch);
-      newCart = [...cart, selectedWatch]
+      if(cart.length > 3) {
+        alert('You already selected 4 items')
+        newCart = [...cart]
+      }
+      else {
+        newCart = [...cart, selectedWatch]
+      }
     }
     else {
       newCart = [...cart];
@@ -33,7 +39,12 @@ const Shop = () => {
 
   }
 
-  console.log(cart);
+  const chooseAgain = (setluckyWatch) => {
+    setCart([]);
+    setluckyWatch([]);
+  }
+
+  // console.log(cart);
 
   return (
     <div className='shop container'>
@@ -52,6 +63,7 @@ const Shop = () => {
       <div className="selected-items">
       <Cart
         cart={cart}
+        chooseAgain={chooseAgain}
       ></Cart>
       </div>
     </div>
