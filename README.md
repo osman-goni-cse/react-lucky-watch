@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Watch Shop Web Appliction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Demo: [Watch Shop](https://react-lucky-watch.netlify.app/).
 
-## Available Scripts
+## Project Description
 
-In the project directory, you can run:
+This is a react based web application where user can see different types watches and can add watch to the cart.This web application is responsive.
 
 ### `npm start`
 
