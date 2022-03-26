@@ -3,12 +3,26 @@
   grid-template-columns: 4fr 1fr;
 }
 
-.watches {
+/* .watches {
   border: 2px solid seagreen;
-  /* background-color: burlywood; */
+  background-color: burlywood;
 }
 
 .selected-items {
   border: 2px solid blueviolet;
-  /* background-color: brown; */
+  background-color: brown;
+} */
+
+@media (max-width:768px) {
+  .shop {
+    display: flex;
+    flex-direction: column;
+  }
+  .watches {
+    order: 2;
+  }
+  .selected-items {
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
 }

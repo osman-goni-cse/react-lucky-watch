@@ -6,3 +6,11 @@
   background-color: #ffe0b3;
   color: #1C2B35;
 }
+
+@media (max-width: 768px) {
+  .cart {
+    width: 100%;
+    align-content: center;
+  }
+  
+}
