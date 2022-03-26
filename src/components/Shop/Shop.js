@@ -11,8 +11,29 @@ const Shop = () => {
     fetch('products.json')
     .then(res => res.json())
     .then(data => setWatches(data));
-  }, [])
+  }, []);
 
+  // const selectedItem = [];
+
+  const [cart, setCart] = useState([]);
+
+  const addToCartHandler = (selectedWatch) => {
+    // console.log(selectedWatch);
+    const exists = cart.find(item => item.id === selectedWatch.id)
+    let newCart = [];
+
+    if(!exists) {
+      // selectedItem.push(selectedWatch);
+      newCart = [...cart, selectedWatch]
+    }
+    else {
+      newCart = [...cart];
+    }
+    setCart(newCart);
+
+  }
+
+  console.log(cart);
 
   return (
     <div className='shop container'>
@@ -22,13 +43,16 @@ const Shop = () => {
           watches.map(watch => <Watch
             key={watch.id}
             watch={watch}
+            addToCartHandler={addToCartHandler}
           ></Watch>)
         }
 
       </div>
 
       <div className="selected-items">
-        <Cart></Cart>
+      <Cart
+        cart={cart}
+      ></Cart>
       </div>
     </div>
   );

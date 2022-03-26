@@ -6,7 +6,11 @@ import './Watch.css'
 const Watch = (props) => {
   // console.log(props);
   // console.log(props.watch);
-  const {name, img, price} = props.watch;
+  const {id, name, img, price} = props.watch;
+  const addToCartHandler = props.addToCartHandler;
+
+  // console.log(addToCartHandler);
+  // console.log(props.addToCartHandler);
   // console.log(name, img, price);
   
   return (
@@ -21,7 +25,7 @@ const Watch = (props) => {
           <p className="card-text">Price: {price} Tk </p>
         </div>
         <div className="mt-5">
-          <button className="cart-btn">
+          <button onClick={() => addToCartHandler(props.watch)} className="cart-btn">
             <p className='cart-text'>Add To Cart</p>
             <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
           </button>
